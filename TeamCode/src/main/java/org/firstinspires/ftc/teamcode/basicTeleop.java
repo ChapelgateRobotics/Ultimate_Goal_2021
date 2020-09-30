@@ -26,10 +26,10 @@ class basicTeleop extends OpMode
     @Override
     public void loop()
     {
-        backLeft.getMotorType(DcMotor.class, "blackLeft");
-        backRight.getMotorType(DcMotor.class, "backRight");
-        frontLeft.getMotorType(DcMotor.class, "frontLeft");
-        frontRight.getMotorType(DcMotor.class, "frontRight");
+        backLeft  = hardwareMap.get(DcMotor.class, "blackLeft");
+        backRight = hardwareMap.get(DcMotor.class, "backRight");
+        frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
+        frontRight= hardwareMap.get(DcMotor.class, "frontRight");
 
 
     }
