@@ -13,23 +13,28 @@ import com.qualcomm.robotcore.hardware.DcMotor;
  */
 class basicTeleop extends OpMode
 {
-    @Override
-    public void init()
-    {
 
-    }
     DcMotor backLeft;
     DcMotor backRight;
     DcMotor frontLeft;
     DcMotor frontRight;
 
     @Override
-    public void loop()
+    public void init()
     {
         backLeft  = hardwareMap.get(DcMotor.class, "blackLeft");
         backRight = hardwareMap.get(DcMotor.class, "backRight");
         frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
         frontRight= hardwareMap.get(DcMotor.class, "frontRight");
+        frontLeft.setDirection(DcMotor.Direction.REVERSE);
+        backLeft.setDirection(DcMotor.Direction.REVERSE);
+    }
+
+
+    @Override
+    public void loop()
+    {
+
 
 
     }
