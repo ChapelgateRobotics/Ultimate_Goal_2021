@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
-import sun.text.resources.th.BreakIteratorInfo_th;
+//import sun.text.resources.th.BreakIteratorInfo_th;
 
 /**
  * Created byhomefrankfurth on 9/30/20 in Android_Studio-FTC_app.
@@ -124,8 +124,6 @@ public class basicTeleop extends OpMode {
         } else {
             wobbleGoalGrabber.setPower(0);
         }
-
-
         if(gamepad1.x){
         if (!if_pressedGp1x) {
             if (WGS.getPosition() <= 0.1) {
@@ -143,7 +141,7 @@ public class basicTeleop extends OpMode {
 
     private void setDriveMotors(){
         if (gamepad1.right_stick_y - gamepad1.right_stick_x >1){
-            frontLeft.setPower(1 -gamepad1.left_stick_x /2);
+            frontLeft.setPower(1 - gamepad1.left_stick_x /2);
             backRight.setPower(1 + gamepad1.left_stick_x /2);
         }
         else {
@@ -152,7 +150,7 @@ public class basicTeleop extends OpMode {
 
         }if (gamepad1.right_stick_y + gamepad1.right_stick_x > 1){
             frontRight.setPower(1 + gamepad1.left_stick_x /2);
-            backLeft.setPower(1 -gamepad1.left_stick_x /2);
+            backLeft.setPower(1 - gamepad1.left_stick_x /2);
         }else{
             frontRight.setPower((gamepad1.right_stick_y + gamepad1.right_stick_x) + gamepad1.right_stick_x /2);
             backLeft.setPower((gamepad1.right_stick_y + gamepad1.right_stick_x) - gamepad1.left_stick_x /2);
