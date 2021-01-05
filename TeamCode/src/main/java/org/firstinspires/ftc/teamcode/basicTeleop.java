@@ -32,13 +32,14 @@ public class basicTeleop extends OpMode {
 
     final double COLLECTPOWER = 1.0;
     final double TICKS_PER_REVOLUTION = (383.6 * 2);
-    final double wobbleGoalGrapperPOWER = 0.5;
 
+    final double wobbleGoalGrapperPOWER = 0.5;
     boolean if_pressedGp1x = false;
     double MAXTICKS = 383.6 / 2;
 
     @Override
     public void init() {
+       /*
         // maps motor names to hardware on Rev Expansion Hub
         frontLeft = hardwareMap.get(DcMotor.class, "frontLeft");
         frontRight = hardwareMap.get(DcMotor.class, "frontRight");
@@ -62,7 +63,7 @@ public class basicTeleop extends OpMode {
         frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         backLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         backRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-
+*/
         intake = hardwareMap.dcMotor.get("intake");
         intake.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         intake.setDirection(DcMotor.Direction.FORWARD);
